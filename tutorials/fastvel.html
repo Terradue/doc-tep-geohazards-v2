@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>FASTVEL for displacement velocity map generation &#8212; Geohazards Thematic Exploitation Platform 2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.3.4/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="PSI Post Processing Service" href="psi_post_proc.html" />
+    <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
+    <script src="../_static/affixTrick.js"></script>
+  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+<!-- <header>
+	<div class="container">
+		<a href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+		<div id="t2-random-slogan">digital earth scalers</div>
+	</div>
+</header> -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top"><!-- navbar-fixed-top-->
+    <div class="container">
+      <div class="navbar-header pull-right">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.terradue.com" target="_blank"><img id="logo" src="../_static/t2Logo.png"></a>
+        <!--<a class="navbar-brand" href="../index.html"><img class="navbar-brand-logo" src="../_static/logo-geohazard.png" alt="sandbox-logo"/></a>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+	    <a class="navbar-brand" href="https://geohazards-tep.eo.esa.int/#!" target="_blank"><img id="logo" src="../_static/logo-geohazard.png"></a>
+            <li class="divider-vertical"></li>
+<!--             <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <b>2.0</b><b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu globaltoc">
+        <li><a href="/devel">1.2 (Devel)</a></li>
+        <li><a href="/stable">1.1 (Stable)</a></li>
+    </ul>
+</li> -->
+
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">FASTVEL for displacement velocity map generation</a><ul>
+<li><a class="reference internal" href="#processor-configuration">Processor configuration</a></li>
+<li><a class="reference internal" href="#running-the-job">Running the job</a></li>
+<li><a class="reference internal" href="#view-results-on-the-map">View results on the map</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="psi_post_proc.html" title="Previous Chapter: PSI Post Processing Service"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; PSI Post Proc...</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li><div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/fastvel.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div></li>
+            
+          </ul>
+        </div>
+    </div>
+</div>
+<div id="navbarSpacer"></div>
+
+<div class="container">
+  <div class="row">
+<!--<div class="alert alert-danger alert-error alert-dismissable" style="margin-left: 15px; margin-right: 15px;">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <p class="first admonition-title">
+        Warning
+    </p>
+    <p class="last">
+        This guide is under development. The material on this page needs to be reviewed for completeness and accuracy. This guide may have not been updated yet from the last release.
+    </p>
+</div>-->
+
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenavNew" role="complementary"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community-guide/index.html">Community Portal User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Community Advanced User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">Community Portal Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-nest-insar.html">G-POD NEST InSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-nest-coreg.html">G-POD NEST Coreg Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">SNAP Sentinel-1 COherence and INtensity (COIN) processing service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">Surface Temperature Map (STEMP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FASTVEL for displacement velocity map generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#processor-configuration">Processor configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-job">Running the job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-results-on-the-map">View results on the map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="sourcelink">
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/fastvel.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+
+    <div class="col-md-9">
+      
+  <div class="section" id="fastvel-for-displacement-velocity-map-generation">
+<h1>FASTVEL for displacement velocity map generation<a class="headerlink" href="#fastvel-for-displacement-velocity-map-generation" title="Permalink to this headline">¶</a></h1>
+<p>FASTVEL is a PSI based processing software developed by TRE-Altamira.</p>
+<p>This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms
+or a mean displacement velocity map on the GEP.</p>
+<div class="section" id="processor-configuration">
+<h2>Processor configuration<a class="headerlink" href="#processor-configuration" title="Permalink to this headline">¶</a></h2>
+<p>The user shall login on the GEP to the EO services provided by TRE ALTAMIRA and in the Processing Services section, select the FASTVEL service from
+the services tab.</p>
+<ul class="simple">
+<li>Select an area on the map. In the &#8220;Search Form&#8221; temporal selection can be done and specification about other search parameters can be done. The images must have the same &#8220;Orbit Direction&#8221; and the same track.</li>
+<li>Choose the set of images to be processed. A minimum number of 25 images are required.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_1.png"><img alt="../_images/tuto_fastvel_1.png" src="../_images/tuto_fastvel_1.png" style="width: 750px;" /></a>
+</div>
+<p>Complete the following list of processing parameters:</p>
+<p><strong>SAR data set</strong>: set of SLC images to be processed. A minimum number of 25 images are required. <strong>Drag
+and drop the selected images on the search result to this field</strong>. Note that depending on: the Maximum Temporal Baseline [days], the
+Maximum Perpendicular Baseline [m], the Maximum Doppler Difference [Hz] and the Maximum Doppler Centroid [Hz], this number could be reduced
+causing the stop of the processing. To that matter it is recommended to put a larger number than 25.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_2.png"><img alt="../_images/tuto_fastvel_2.png" src="../_images/tuto_fastvel_2.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_3.png"><img alt="../_images/tuto_fastvel_3.png" src="../_images/tuto_fastvel_3.png" style="width: 750px;" /></a>
+</div>
+<p><strong>Processing Mode</strong>:</p>
+<ul class="simple">
+<li><strong>IFG</strong>: generation of a set of differential interferograms. If this mode is selected, the parameters to be considered are: Area Of Interest,</li>
+</ul>
+<p>Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz],
+Maximum Doppler Centroid [Hz], Goldstein phase filter exponential factor, Phase Unwrapping.</p>
+<ul class="simple">
+<li><strong>MTA</strong>: generation of the displacement velocity and DEM error maps. If this mode is selected, the parameters to be considered are: Area Of Interest,</li>
+</ul>
+<p>Reference Point Lattitude [deg], Reference Point Longitude [deg], Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m],
+Maximum Doppler Difference [Hz], Maximum Doppler Centroid [Hz], Coherence Threshold, APS Correlation Distance [m].</p>
+<p><strong>Area Of Interest</strong>: restrict process to the selected area. The polygon on the map can be imported as the bounding box in the map.
+It can be also specified by [minlon, minlat, maxlon, maxlat]. <em>Example: 1.717,41.778,1.916,41.878</em></p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_4.png"><img alt="../_images/tuto_fastvel_4.png" src="../_images/tuto_fastvel_4.png" style="width: 750px;" /></a>
+</div>
+<p><strong>Reference Point Latitude [deg]</strong>: Latitude of the point (zero motion) to whom reference the velocity map points values. It has to be inside the AOI. An automatic check is done. <em>Example: 41.830858</em></p>
+<p><strong>Reference Point Longitude [deg]</strong>: Longitude of the point (zero motion) to whom reference the velocity map points values. It has to be inside the AOI. An automatic check is done. <em>Example: 1.753163</em></p>
+<p><strong>Maximum Temporal Baseline [days]</strong>: Maximum Temporal Baseline in days between images to allow the corresponding interferogram generation. <em>Default value: 365.</em></p>
+<p><strong>Maximum Perpendicular Baseline [m]</strong>: Maximum Spatial Baseline in meters between images to allow the corresponding interferogram generation. <em>Default value: 400.</em></p>
+<p><strong>Maximum Doppler Difference [Hz]</strong>: Maximum Doppler Centroid differences in Herzts between images to allow the corresponding interferogram generation.
+<em>Default value: 1000.</em></p>
+<p><strong>Maximum Doppler Centroid [Hz]</strong>: Maximum Image Doppler Centroid in Herzts for considering that image to be part of the dataset to process. <em>Default value: 2000.</em></p>
+<p><strong>Goldstein phase filter exponential factor</strong>: (on the IFG mode) filter power factor [0,1]. <em>Default value: 0.5</em></p>
+<p><strong>Phase Unwrapping</strong>: selection (on the IFG mode) of the phase unwrapping of the differential interferograms. <em>Default mode: false.</em></p>
+<p><strong>Coherence Threshold</strong>: (on the MTA mode) mean interferometric coherence threshold for considering a pixel to be processed in the
+generation of the velocity and DEM error maps. <em>Default value: 0.5.</em></p>
+<p><strong>APS Correlation Distance [m]</strong>: (on the MTA mode) Atmospheric Phase Screen Correlation distance, i.e.,
+maximum distance in meters allowed for connecting neighboring pixels in the process to generate the velocity and DEM error maps. <em>Default value: 3000.</em></p>
+</div>
+<div class="section" id="running-the-job">
+<h2>Running the job<a class="headerlink" href="#running-the-job" title="Permalink to this headline">¶</a></h2>
+<p>Click on &#8220;Run Job&#8221; button from the processor configuration panel and wait for the job to complete.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_5.png"><img alt="../_images/tuto_fastvel_5.png" src="../_images/tuto_fastvel_5.png" style="width: 750px;" /></a>
+</div>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_6.png"><img alt="../_images/tuto_fastvel_6.png" src="../_images/tuto_fastvel_6.png" style="width: 750px;" /></a>
+</div>
+</div>
+<div class="section" id="view-results-on-the-map">
+<h2>View results on the map<a class="headerlink" href="#view-results-on-the-map" title="Permalink to this headline">¶</a></h2>
+<p>Click on the Show results on map button after the job is completed.</p>
+<p>After successful completion of the job, the following elements shall appear on the <em>Results Table</em>:</p>
+<p><strong>On IFG mode</strong>:</p>
+<ul class="simple">
+<li>The interferometric amplitude in geotiff format. This is the modulus of the complex product of the master SLC image and the coregistered slave SLC image.</li>
+<li>The interferometric coherence in geotiff format. This is a floating point geotiff image with values within [0.0 255.0]. Pixel values of 255.0 are equivalent to a coherence value of 1.</li>
+<li>The interferometric phase in geotiff format. This is an integer geotiff image with phase values within [0 255].</li>
+<li>The interferometric phase in in geotiff format RGBA format.</li>
+<li>The unwrapped interferometric phase (if unwrapping selected) in geotiff format. This is the raw unwrapped phase in radians.</li>
+<li>The unwrapped interferometric phase (if unwrapping selected) in geotiff format RGBA format.</li>
+<li>A zip file products.zip containing all geocoded results in geotiff format.</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_7.png"><img alt="../_images/tuto_fastvel_7.png" src="../_images/tuto_fastvel_7.png" style="width: 750px;" /></a>
+</div>
+<p>It is possible to download the result files, first by selecting them on the Results Table, a descriptive window about the file shall appear on the map. Clicking on the &#8220;download&#8221; button retrieves the file.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_8.png"><img alt="../_images/tuto_fastvel_8.png" src="../_images/tuto_fastvel_8.png" style="width: 750px;" /></a>
+</div>
+<p><strong>On MTA mode</strong>:</p>
+<ul class="simple">
+<li>Mean displacement velocity (cm/y) map in geotiff format.</li>
+<li>RGB Mean displacement velocity map.</li>
+<li>Corrected topography (DEM error + reference DEM (meters)) map in geotiff format.</li>
+<li>RGB Corrected topography map.</li>
+<li>CSV files with the main information of PSI products, in the LOS (Line Of Sight), in which each line of the database will represent one measurement point. The list of fields in the csv (corresponding to the columns of the database) is the following:</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>ID: Unique identifier label for each measurement point.</li>
+<li>Lon: Geographical Longitude position [decimal degrees over WGS84].</li>
+<li>Lat: Geographical Latitude position [decimal degrees over WGS84].</li>
+<li>Topo: Corrected Height error (reference DEM + error height) [meters].</li>
+<li>Coer: Mean Interferometric  Coherence [0,1].</li>
+<li>cosN, cosE, cosU: North, East and Up LOS unitary vector components.</li>
+<li>Vel: LOS ground displacement mean velocity value measured for the observation period [cm/year].</li>
+<li>Erh: Height error [meters].</li>
+</ul>
+</div></blockquote>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_9.png"><img alt="../_images/tuto_fastvel_9.png" src="../_images/tuto_fastvel_9.png" style="width: 750px;" /></a>
+</div>
+<p>It is possible to download the result files, first by selecting them on the Results Table, a descriptive window about the file shall appear on the map. Clicking on the &#8220;download&#8221; button retrieves the file.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/tuto_fastvel_10.png"><img alt="../_images/tuto_fastvel_10.png" src="../_images/tuto_fastvel_10.png" style="width: 750px;" /></a>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<img src="../_static/t2LogoLittleWhite.png">
+		&nbsp;&nbsp;&nbsp;Copyright 2006-2014 &copy; Terradue. All Rights Reserved. Please send comments to <a href="mailto:info [at] terradue [dot] com">info</a>. <p class="pull-right">This site is hosted by <a href="http://www.terradue.com">Terradue</a>.</p>
+	</div>
+</footer>
+
+  </body>
+</html>
