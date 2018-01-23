@@ -257,7 +257,8 @@
 <div class="section" id="select-input-data">
 <h3>Select input data<a class="headerlink" href="#select-input-data" title="Permalink to this headline">¶</a></h3>
 <p>The Geobrowser offers multiple ways to search and discover a large variety of EO-based dataset and the interested reader should refer to the <a class="reference internal" href="../community-guide/platform/geobrowser.html"><span class="doc">Geobrowser</span></a> section for a general introduction.
-For this tutorial we will rely on readily prepared data packages which are accessible through the &#8220;Data Packages&#8221; tab on the lower right of the screen. If you type &#8220;Harmaliere&#8221; into the search box you should be able to find a data package named &#8220;Harmaliere landslide&#8221;. Similarily you can search for &#8220;Kaikoura&#8221; to find the data package that we will use in the second part of this tutorial.</p>
+For this tutorial we will rely on readily prepared data packages which are accessible through the &#8220;Data Packages&#8221; tab on the lower right of the screen. If you type &#8220;Harmaliere&#8221; into the search box you should be able to find a data package named &#8220;Harmaliere landslide&#8221;. Alternatively you can access the <a class="reference external" href="https://geohazards-tep.eo.esa.int/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eo.esa.int%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DHarmalierelandslide">Harmaliere landslide data package</a> directly by clicking on the provided link.</p>
+<p>Similarily you can search for &#8220;Kaikoura&#8221; to find the data package that we will use in the second part of this tutorial.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_mpicopt_3.png"><img alt="../_images/tuto_mpicopt_3.png" src="../_images/tuto_mpicopt_3.png" style="width: 750px;" /></a>
 </div>
@@ -314,7 +315,7 @@ For this tutorial we will rely on readily prepared data packages which are acces
 <p>With this second use case we will illustrate the use of MPIC-OPT for measurements of co-seismic slip using the example of the <a class="reference external" href="https://en.wikipedia.org/wiki/2016_Kaikoura_earthquake">Kaikoura earthquake</a> which hit the southern island of New Zealand on 14 November 2016.</p>
 <div class="section" id="id3">
 <h3>Select input data<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>As in the previous example there is already a data package available which we you can find by typing &#8220;Kaikoura&#8221; in the search box in the &#8220;Data Packages&#8221; tab on the lower right of the screen.</p>
+<p>As in the previous example there is already a data package available which we you can find by typing &#8220;Kaikoura&#8221; in the search box in the &#8220;Data Packages&#8221; tab on the lower right of the screen. Alternatively, you can access the <a class="reference external" href="https://geohazards-tep.eo.esa.int/t2api/share?url=https%3A%2F%2Fgeohazards-tep.eo.esa.int%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DKaikouraEarthquakeSentinel-2">Kaikoura data package</a> directly by clicking on the link.</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_mpicopt_8.png"><img alt="../_images/tuto_mpicopt_8.png" src="../_images/tuto_mpicopt_8.png" style="width: 750px;" /></a>
 </div>
@@ -363,6 +364,15 @@ For this tutorial we will rely on readily prepared data packages which are acces
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_mpicopt_12.png"><img alt="../_images/tuto_mpicopt_12.png" src="../_images/tuto_mpicopt_12.png" style="width: 750px;" /></a>
 </div>
+<p>The service output generally includes the following files:</p>
+<ul class="simple">
+<li><strong>Cloud masks:</strong> 8-bit GeoTiffs representing the mask for each time step. Areas with no data and covered by clouds in the two respective input images marked as 0. Valid pixels are marked with 255. The naming convention is: <em>cloud_masks_assembled_dateimage1_dateimage2.tif</em></li>
+<li><strong>Corrected displacement fields and correlation maps for each time step:</strong> Floating point GeoTiffs representing the measured displacements among the two respective input images in pixels in E-W direction (east is postive) and N-S direction (South is positive): The naming conventions are <em>Px1_dateimage1_dateimage2.tif</em> and <em>Px2_dateimage1_dateimage2.tif</em> respectively.</li>
+<li><strong>Correllation coefficient:</strong>  8-bit GeoTiffs representing the correlation coefficient for each time step with the correlation coefficient [0,1] quantized to a range of 128 to 255. The naming convention is <em>Correl_dateimage1_dateimage2.tif</em></li>
+<li><strong>Vector coherence:</strong> A floating point GeoTiff representing the vector coherence of all time-steps accumulated with a value range of [0,1]. The naming convention is <em>vector_coherence_dateimage1_dateimage2.tif</em></li>
+<li><strong>Mean displacement:</strong> A floating point GeoTiff representing the average displacement over all time steps in meters. The naming convention is <em>mean_displacement_$dateimage1_dateimage2.tif</em></li>
+<li><strong>Mean velocity:</strong> Two floating point GeoTiffs representing the mean absolute velocities in E−W direction and N−S direction in meters/day respectively. The naming conventions are <em>mean_veloc_ew_dateimage1_dateimage2.tif</em> and <em>mean_veloc_ns_dateimage1_dateimage2.tif</em>.</li>
+</ul>
 </div>
 </div>
 <div class="section" id="references">
