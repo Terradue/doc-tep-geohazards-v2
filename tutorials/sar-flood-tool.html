@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>G-POD GAMMA Level0 Service &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
+    <title>SAR Flood Tool Service &#8212; Geohazards Thematic Exploitation Platform 2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -33,8 +33,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="G-POD PF-ASAR Service" href="gpod-pf-asar.html" />
-    <link rel="prev" title="G-POD SBAS InSAR Service" href="gpod-sbas-insar.html" />
+    <link rel="prev" title="Optical Flood Tool Service" href="optical-flood-tool.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -111,13 +110,10 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">G-POD GAMMA Level0 Service</a><ul>
+<li><a class="reference internal" href="#">SAR Flood Tool Service</a><ul>
 <li><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
 <li><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
-<li><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a><ul>
-<li><a class="reference internal" href="#task-caption-and-job-title">Task Caption and Job Title</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
 <li><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
@@ -130,11 +126,7 @@
               
                 
   <li>
-    <a href="gpod-sbas-insar.html" title="Previous Chapter: G-POD SBAS InSAR Service"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; G-POD SBAS In...</span>
-    </a>
-  </li>
-  <li>
-    <a href="gpod-pf-asar.html" title="Next Chapter: G-POD PF-ASAR Service"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">G-POD PF-ASAR Service &raquo;</span>
+    <a href="optical-flood-tool.html" title="Previous Chapter: Optical Flood Tool Service"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Optical Flood...</span>
     </a>
   </li>
               
@@ -143,7 +135,7 @@
             
             
               <li><div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/gpod-gamma-l0.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/sar-flood-tool.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div></li>
             
           </ul>
@@ -179,16 +171,7 @@
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">G-POD GAMMA-L0 Service</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#task-caption-and-job-title">Task Caption and Job Title</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
@@ -205,12 +188,18 @@
 <li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">CNR-IREA P-SBAS Sentinel-1 processing on-demand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">Full Resolution Rasterization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SAR Flood Tool Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-processing">Select the processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-the-files-to-process">Select the files to process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fill-the-parameter-values">Fill the parameter values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <div id="sourcelink">
-  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/gpod-gamma-l0.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
+  <a href="https://github.com/Terradue/doc-tep-geohazards/blob/feature/v2/source/tutorials/sar-flood-tool.rst" rel="nofollow" target="_blank"><span class='githubLogo'></span>Source</a>
 </div>
 <form action="../search.html" method="get">
  <div class="form-group">
@@ -224,73 +213,79 @@
 
     <div class="col-md-9">
       
-  <div class="section" id="g-pod-gamma-level0-service">
-<h1>G-POD GAMMA Level0 Service<a class="headerlink" href="#g-pod-gamma-level0-service" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sar-flood-tool-service">
+<h1>SAR Flood Tool Service<a class="headerlink" href="#sar-flood-tool-service" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Sign-in on the Portal <a class="reference external" href="https://geohazards-tep.eo.esa.int/">https://geohazards-tep.eo.esa.int/</a> (see guidance <a class="reference internal" href="../community-guide/user.html"><span class="doc">user</span></a> section)</li>
 <li>Access the Geobrowser: <a class="reference external" href="https://geohazards-tep.eo.esa.int/geobrowser/">https://geohazards-tep.eo.esa.int/geobrowser/</a></li>
-<li>Open the tab &#8220;Processing services&#8221; from the right of the map, and then select the processing service “GAMMA Level-0”:</li>
+<li>Open the tab &#8220;Processing services&#8221; from the right of the map, then select the processing service “SAR flood extraction”.</li>
 </ul>
 </div>
 <div class="section" id="select-the-files-to-process">
 <h2>Select the files to process<a class="headerlink" href="#select-the-files-to-process" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Navigate on the map to the central Italy and define both the geo and time filters for data search.</li>
-<li>Use the spatial filter tooltip &#8220;Draw a rectangle&#8221; in order to define the search Area of Interest (AOI) over the central Italy.</li>
-<li>Use the temporal filter tooltips (the ones with dates labels) in order to define the search time span, both around 2009-02-01. NOTE: you can also edit precise search dates from the &#8220;Search Form&#8221; tooltip.</li>
-<li>From this filtered search, make drag and drops from the &#8220;Results Table&#8221; to your &#8220;Features Basket&#8221;, in order to select the following input file:</li>
+<li>Click on the <em>Data Packages</em> button in the bottom right of the screen, within the Features Basket panel.</li>
 </ul>
-<div class="highlight-gamma-parameter"><div class="highlight"><pre><span></span>ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
+<p>Then select from the list the &#8220;SAR-flood-trial-case&#8221; data package and click on <em>load</em>.
+The input data are standard interferometric Sentinel-1 SLC images, e.g. the images have the same relative orbit number. In order to select suitable images for the service you can use the following string in the search box (top left of the web page):</p>
+<div class="highlight-parameter"><div class="highlight"><pre><span></span>track:81 &amp;&amp; pt:slc
+</pre></div>
+</div>
+<p>The selected data package contains the reference to the following input file:</p>
+<div class="highlight-parameter"><div class="highlight"><pre><span></span>S1A_IW_SLC__1SDV_20150328T061348_20150328T061415_005228_0069A4_2B88
+S1A_IW_SLC__1SDV_20151205T061403_20151205T061430_008903_00CBC9_FD2D
+S1A_IW_SLC__1SDV_20151217T061404_20151217T061434_009078_00D09B_065C
 </pre></div>
 </div>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gamma_1.jpg"><img alt="../_images/tuto_gamma_1.jpg" src="../_images/tuto_gamma_1.jpg" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/SAR_flood_2.png"><img alt="../_images/SAR_flood_2.png" src="../_images/SAR_flood_2.png" style="width: 750px;" /></a>
 </div>
 </div>
 <div class="section" id="fill-the-parameter-values">
 <h2>Fill the parameter values<a class="headerlink" href="#fill-the-parameter-values" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="task-caption-and-job-title">
-<h3>Task Caption and Job Title<a class="headerlink" href="#task-caption-and-job-title" title="Permalink to this headline">¶</a></h3>
+<p>Define values for the &#8220;Job title&#8221;, the &#8220;SAR images&#8221; and the &#8220;Sub-swath&#8221; fields.</p>
 <ul class="simple">
 <li>As <em>Job title</em>, type:</li>
 </ul>
-<div class="highlight-gamma-parameter"><div class="highlight"><pre><span></span>GAMMA-L0
+<div class="highlight-parameter"><div class="highlight"><pre><span></span>SAR flood extraction
 </pre></div>
 </div>
 <ul class="simple">
-<li>As input <em>Files</em>, drag and drop the selected product:</li>
+<li>As input <em>SAR images</em>, drag and drop the selected input file:</li>
 </ul>
-<div class="highlight-gamma-parameter"><div class="highlight"><pre><span></span>ENVISAT ASAR ASA_IM__0P, 2009-02-01T09:24:28.014Z, V/V, Track 79
-</pre></div>
-</div>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gamma_2.jpg"><img alt="../_images/tuto_gamma_2.jpg" src="../_images/tuto_gamma_2.jpg" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/SAR_flood_3.png"><img alt="../_images/SAR_flood_3.png" src="../_images/SAR_flood_3.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
-<li>As <em>Task Caption</em>, type:</li>
+<li>As <em>Sub-swath</em>, select:</li>
 </ul>
-<div class="highlight-gamma-parameter"><div class="highlight"><pre><span></span>GAMMA-L0
+<div class="highlight-parameter"><div class="highlight"><pre><span></span>IW-3
 </pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="run-the-job">
 <h2>Run the job<a class="headerlink" href="#run-the-job" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Click on the button &#8220;Run Job&#8221; at the bottom of the GAMMA Level-0 processor tab, and monitor the progress of the running Job:</li>
+<li>Click on the button &#8220;Run Job&#8221; at the bottom of the sar flood extraction processor tab, and monitor the progress of the running Job:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gamma_3.jpg"><img alt="../_images/tuto_gamma_3.jpg" src="../_images/tuto_gamma_3.jpg" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/SAR_flood_4.png"><img alt="../_images/SAR_flood_4.png" src="../_images/SAR_flood_4.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
 <li>Wait for the Job completion, then check the status is set as &#8220;Successful Job”.</li>
-<li>Download the GAMMA Level-0 processing results once the Job is completed:</li>
 </ul>
 <div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_gamma_4.jpg"><img alt="../_images/tuto_gamma_4.jpg" src="../_images/tuto_gamma_4.jpg" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/SAR_flood_5.png"><img alt="../_images/SAR_flood_5.png" src="../_images/SAR_flood_5.png" style="width: 750px;" /></a>
 </div>
+<ul class="simple">
+<li>Download the sar flood extraction processing results once the Job is completed:</li>
+</ul>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/SAR_flood_6.png"><img alt="../_images/SAR_flood_6.png" src="../_images/SAR_flood_6.png" style="width: 750px;" /></a>
+</div>
+<p>The output of the service (flood mask) is a GeoTiff file, represented in byte format, with &#8220;1&#8221; value where the flood is present, &#8220;0&#8221; otherwise.</p>
 </div>
 </div>
 
