@@ -171,14 +171,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Sentinel-1 Interferogram generation with DIAPASON</a><ul>
@@ -218,8 +215,24 @@
       
   <div class="section" id="sentinel-1-iw-mode-interferogram-generation-with-diapason">
 <h1>Sentinel-1 IW mode Interferogram generation with DIAPASON<a class="headerlink" href="#sentinel-1-iw-mode-interferogram-generation-with-diapason" title="Permalink to this headline">¶</a></h1>
-<p>DIAPASON is an InSAR processing software developed by the French space agency (CNES) and
-maintained by ALTAMIRA INFORMATION.</p>
+<img alt="../_images/tuto_diapiw_icon.png" src="../_images/tuto_diapiw_icon.png" />
+<p><strong>DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</strong></p>
+<p>DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and maintained by TRE Altamira. This service performs an InSAR workflow on Sentinel-1 TOPSAR (IW,EW) data, producing interferograms, amplitude and coherence maps. To run this service, specify master and slave Sentinel-1 SLC images.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sentinel-1 TOPSAR IW SLC</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Interferometric Amplitude</li>
+<li>Interferometric Coherence</li>
+<li>Interferometric Phase</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
 <p>This tutorial will describe the processing of interferograms from pairs of Sentinel-1 IW images on the GEP.</p>
 <div class="section" id="processor-configuration">
 <h2>Processor configuration<a class="headerlink" href="#processor-configuration" title="Permalink to this headline">¶</a></h2>
@@ -230,17 +243,19 @@ maintained by ALTAMIRA INFORMATION.</p>
 <a class="reference internal image-reference" href="../_images/tuto_diapiw_1.png"><img alt="../_images/tuto_diapiw_1.png" src="../_images/tuto_diapiw_1.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
-<li>Select an area on the map . In the &#8220;Search Terms&#8221; field , you may type &#8220;IW AND SLC NOT GRD&#8221; to search for</li>
+<li>Select an area on the map . In the &#8220;Search Terms&#8221; field , you may type &#8220;IW AND SLC NOT GRD&#8221; to search for the correct product type covering the area</li>
 </ul>
-<p>the correct product type covering the area</p>
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_diapiw_2.png"><img alt="../_images/tuto_diapiw_2.png" src="../_images/tuto_diapiw_2.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
-<li>Choose the image pair to be processed from the &#8220;Current search result&#8221; pane.</li>
+<li>Choose the image pair to be processed from the &#8220;Current search result&#8221; pane. Drag and Drop the image to be used as master  into the &#8220;Sentinel-1 IW master&#8221; field, then select the slave image into the &#8220;Sentinel-1 IW slave&#8221; field.</li>
 </ul>
-<p>Drag and Drop the image to be used as master  into the &#8220;Sentinel-1 IW master&#8221; field, then select the slave image into the &#8220;Sentinel-1 IW slave&#8221; field.</p>
 <p>The images shall be from the same track.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">slave and master can be picked up by using the following data package (alternatively to the search steps described): <strong>ChileTrack156</strong></p>
+</div>
 <ul class="simple">
 <li>Set the polarization to process from the &#8220;polarization&#8221; drop-down list</li>
 </ul>

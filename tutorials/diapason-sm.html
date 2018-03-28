@@ -171,14 +171,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Stripmap Interferogram generation with DIAPASON</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#processor-configuration">Processor configuration</a></li>
@@ -218,10 +215,27 @@
       
   <div class="section" id="stripmap-mode-interferogram-generation-with-diapason">
 <h1>Stripmap mode Interferogram generation with DIAPASON<a class="headerlink" href="#stripmap-mode-interferogram-generation-with-diapason" title="Permalink to this headline">¶</a></h1>
-<p>DIAPASON is an InSAR processing software developed by the French space agency (CNES) and
-maintained by ALTAMIRA INFORMATION.</p>
-<p>In this tutorial we will use the GEP service DIAPASON InSAR StripMap(SM) to generate an interferogram
-from two Sentinel-1 images.</p>
+<img alt="../_images/tuto_diapsm_icon.png" src="../_images/tuto_diapsm_icon.png" />
+<p><strong>DIAPASON InSAR - StripMap(SM)</strong></p>
+<p>DIAPASON is an InSAR tool suite developed by the French Space Agency (CNES) and maintained by ALTAMIRA INFORMATION.This service performs an InSAR workflow on ENVISAT,ERS(RAW and SLC) or Sentinel-1 (SLC) stripmap data, producing interferograms, amplitude and coherence maps. To run this service , specify a master and a slave image of the same mission.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Envisat ASAR</li>
+<li>ERS (RAW and SLC)</li>
+<li>Sentinel-1 StripMap SLC</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Interferometric Amplitude</li>
+<li>Interferometric Coherence</li>
+<li>Interferometric Phase</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<p>In this tutorial we will use the GEP service DIAPASON InSAR StripMap(SM) to generate an interferogram from two Sentinel-1 images.</p>
 <div class="section" id="processor-configuration">
 <h2>Processor configuration<a class="headerlink" href="#processor-configuration" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -231,10 +245,7 @@ from two Sentinel-1 images.</p>
 <a class="reference internal image-reference" href="../_images/tuto_diapsm_1.png"><img alt="../_images/tuto_diapsm_1.png" src="../_images/tuto_diapsm_1.png" style="width: 750px;" /></a>
 </div>
 <ul class="simple">
-<li>In the &#8220;EO data&#8221; menu select &#8220;Sentinel-1&#8221;. For the purpose of this tutorial Sentiel-1 images will be used ,but this processor may work</li>
-</ul>
-<p>on ERS pairs or on ASAR pairs as well.</p>
-<ul class="simple">
+<li>In the &#8220;EO data&#8221; menu select &#8220;Sentinel-1&#8221;. For the purpose of this tutorial Sentiel-1 images will be used ,but this processor may work on ERS pairs or on ASAR pairs as well.</li>
 <li>Select an area on the map.</li>
 </ul>
 <p>When processing Sentinel-1 data , it is important to select the correct data type for this processor.  For this , in the &#8220;Search Terms&#8221; field you may

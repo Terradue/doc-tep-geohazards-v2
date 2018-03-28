@@ -172,14 +172,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
@@ -220,6 +217,29 @@
       
   <div class="section" id="surface-temperature-map-stemp">
 <h1>Surface Temperature Map (STEMP)<a class="headerlink" href="#surface-temperature-map-stemp" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_stemp-s2_icon.png" src="../_images/tuto_stemp-s2_icon.png" />
+<img alt="../_images/tuto_stemp-s3_icon.png" src="../_images/tuto_stemp-s3_icon.png" />
+<img alt="../_images/tuto_stemp-l8_icon.png" src="../_images/tuto_stemp-l8_icon.png" />
+<p><strong>STEMP</strong></p>
+<p>In the context of the VOLcanoes Thermal Application for GEP (VOLTAGE) pilot INGV has setup an end-to-end processing chain (named STEMP) for the generation of surface temperature maps over volcanic areas. It generates surface temperature map in file format fitting the Researcher and Users needs from new EO missions data such as Landsat-8, Sentinel-2 and Sentinel-3.</p>
+<dl class="docutils">
+<dt><strong>EO sources supported</strong>:</dt>
+<dd><ul class="first last simple">
+<li>Sentinel-2 MSI L1C</li>
+<li>Sentinel-3 SLSTR L1</li>
+<li>Landsat-8 L1B</li>
+<li>ASTER L1T</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>surface temperature map (STEMP-S3 and STEMP-L8)</li>
+<li>hot spot map (STEMP-S2)</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
 <p>The Surface Temperature Map Process (STEMP) tool aims to produce surface temperature maps using  optical satellite data having thermal bands (Landsat 8, Sentinel 3). STEMP is also able to produce an hot spot detection map only during eruption using Sentinel 2 data.</p>
 <p>STEMP produces a GeoTIFF file as output. It contains the surface temperature maps (or the hot spot pixel  for Sentinel 2). The output name of this product is the same of the input file with the &#8220;_TEMP.tif&#8221; final code. The processing, running in automatic,  can be executed also in manual mode.</p>
 <p>Three different tools are installed on Geohazards TEP platform:</p>

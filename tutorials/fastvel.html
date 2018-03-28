@@ -172,14 +172,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
@@ -220,7 +217,28 @@
       
   <div class="section" id="fastvel-for-displacement-velocity-map-generation">
 <h1>FASTVEL for displacement velocity map generation<a class="headerlink" href="#fastvel-for-displacement-velocity-map-generation" title="Permalink to this headline">¶</a></h1>
-<p>FASTVEL is a PSI based processing software developed by TRE-Altamira.</p>
+<img alt="../_images/tuto_fastvel_icon.png" src="../_images/tuto_fastvel_icon.png" />
+<p><strong>FASTVEl</strong></p>
+<p>FASTVEL algorithm has been developed by TRE-Altamira for generating differential interferograms or PSI-based mean displacement velocity maps from a set of Sentinel-1 or ASAR images</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Envisat ASAR Image Mode Level 0 (RAW)</li>
+<li>Envisat ASAR Image Mode Level 1 (SLC)</li>
+<li>ERS 1/2 Level 0 (RAW)</li>
+<li>ERS 1/2 Level 1 (SLC)</li>
+<li>Sentinel-1 Level 1 (SLC IW/EW modes)</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Differential interferogramas (if IFG mode selected).</li>
+<li>Ground displacement velocity map.</li>
+<li>Updated topography (reference DEM + height error).</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
 <p>This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode)
 or a mean displacement velocity map (MTA mode) on the GEP.</p>
 <div class="section" id="processor-configuration">

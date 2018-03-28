@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Interferogram generation with ROI_PAC" href="roi_pac.html" />
+    <link rel="next" title="StaMPS Permanent Scatterer processing" href="stamps-ps.html" />
     <link rel="prev" title="Interferogram generation with ADORE DORIS" href="adore.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
@@ -134,7 +134,7 @@
     </a>
   </li>
   <li>
-    <a href="roi_pac.html" title="Next Chapter: Interferogram generation with ROI_PAC"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Interferogram... &raquo;</span>
+    <a href="stamps-ps.html" title="Next Chapter: StaMPS Permanent Scatterer processing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">StaMPS Perman... &raquo;</span>
     </a>
   </li>
               
@@ -184,14 +184,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#run-the-job">Run the job</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
@@ -226,7 +223,25 @@
       
   <div class="section" id="interferogram-generation-with-gmtsar">
 <h1>Interferogram generation with GMTSAR<a class="headerlink" href="#interferogram-generation-with-gmtsar" title="Permalink to this headline">¶</a></h1>
-<p>GMTSAR is an open source (GNU General Public License) InSAR processing system designed for users familiar with Generic Mapping Tools (GMT).</p>
+<img alt="../_images/tuto_gmtsar_icon.png" src="../_images/tuto_gmtsar_icon.png" />
+<p><strong>GMTSAR interferometric processor</strong></p>
+<p>GMTSAR is an open source (GNU General Public License) InSAR processing system. This service provides standard 2-pass processing of a master product against one or more slave products.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ERS-1/2 SAR</li>
+<li>Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>amplitude of interferogram (display_amp.ps  )</li>
+<li>phase of interferogram (phase.ps)</li>
+<li>correlation of interferogram (corr.ps)</li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
 <p>This tutorial covers the typical InSAR processing to form an interferogram using two SAR images and a digital elevation model.</p>
 <p>The GMTSAR processing service can also process several pairs master/slave (same master).</p>
 <div class="section" id="select-the-processing">
@@ -242,6 +257,10 @@
 </div>
 <div class="section" id="fill-the-parameters">
 <h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">slave and master can be picked up by using the following data package (alternatively to the search steps described): <strong>BajaCaliforniaEQ</strong></p>
+</div>
 <div class="section" id="slave-product-reference">
 <h3>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">

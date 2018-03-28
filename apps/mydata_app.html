@@ -206,67 +206,65 @@
 <div class="img-border figure">
 <a class="reference internal image-reference" href="../_images/apps_mydata_view.png"><img alt="../_images/apps_mydata_view.png" src="../_images/apps_mydata_view.png" style="width: 1535.2px; height: 727.2px;" /></a>
 </div>
-<p>Each starter user has a personal app in which he can access:</p>
+<p>Each thematic application of the Geohazards TEP platform makes available for users the following functionalities:</p>
 <ul class="simple">
-<li>his private catalog index - using the <strong>My Index</strong> context,</li>
-<li>his private storage - using the <strong>My Repository</strong> context,</li>
+<li>access to his private catalog index - using the <strong>My Index</strong> context,</li>
+<li>access to his private storage - using the <strong>My Repository</strong> context,</li>
 <li>data packages,</li>
-<li>a service to upload local data into his private storage,</li>
-<li>a service to publish data results as atom feeds to the catalogue,</li>
-<li>a service to contextualize on-demand results files</li>
+<li>access to a service to upload local data into his private storage - using the <strong>Store Upload</strong> button,</li>
+<li>access to a service to publish data results as atom feeds to the catalogue - using the <strong>Data publication</strong> processing service</li>
 </ul>
 <div class="section" id="data-upload">
-<h2>Data Upload<a class="headerlink" href="#data-upload" title="Permalink to this headline">¶</a></h2>
+<span id="dataupload"></span><h2>Data Upload<a class="headerlink" href="#data-upload" title="Permalink to this headline">¶</a></h2>
 <p>Allow the user to drag and drop local files and upload them to his private store repository (or to any accessible repository, using custom path eventually).</p>
 <ul class="simple">
 <li>Click on <img alt="storeupload" src="../_images/button_storeupload.png" /></li>
 </ul>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/apps_mydata_dataupload_button.png"><img alt="../_images/apps_mydata_dataupload_button.png" src="../_images/apps_mydata_dataupload_button.png" style="width: 1050.0px; height: 503.3px;" /></a>
+<img alt="../_images/apps_mydata_dataupload_button.png" src="../_images/apps_mydata_dataupload_button.png" />
 </div>
 <ul class="simple">
-<li>Select a <strong>Target Repository</strong> and a <strong>Target Path</strong></li>
+<li>Select a <strong>Target Repository</strong> and a <strong>Target Path</strong> (you can use your private repository or a repository shared with your community, e.g <strong>gep-community</strong>)</li>
 </ul>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/apps_mydata_dataupload_popup1.png"><img alt="../_images/apps_mydata_dataupload_popup1.png" src="../_images/apps_mydata_dataupload_popup1.png" style="width: 403.2px; height: 224.7px;" /></a>
+<img alt="../_images/apps_mydata_dataupload_popup1.png" src="../_images/apps_mydata_dataupload_popup1.png" />
 </div>
 <ul class="simple">
 <li>Drag and drop files</li>
 </ul>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/apps_mydata_dataupload_popup2.png"><img alt="../_images/apps_mydata_dataupload_popup2.png" src="../_images/apps_mydata_dataupload_popup2.png" style="width: 310.8px; height: 214.9px;" /></a>
+<img alt="../_images/apps_mydata_dataupload_popup2.png" src="../_images/apps_mydata_dataupload_popup2.png" />
 </div>
 <ul class="simple">
 <li>Click on <strong>Submit Upload</strong></li>
 </ul>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/apps_mydata_dataupload_popup3.png"><img alt="../_images/apps_mydata_dataupload_popup3.png" src="../_images/apps_mydata_dataupload_popup3.png" style="width: 359.1px; height: 106.4px;" /></a>
+<img alt="../_images/apps_mydata_dataupload_popup3.png" src="../_images/apps_mydata_dataupload_popup3.png" />
 </div>
 <ul class="simple">
 <li>Wait for upload to finish</li>
 </ul>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/apps_mydata_dataupload_popup4.png"><img alt="../_images/apps_mydata_dataupload_popup4.png" src="../_images/apps_mydata_dataupload_popup4.png" style="width: 392.8px; height: 128.0px;" /></a>
+<img alt="../_images/apps_mydata_dataupload_popup4.png" src="../_images/apps_mydata_dataupload_popup4.png" />
 </div>
 <ul class="simple">
 <li>Click on <strong>Close and update context</strong>, a search query is performed on the defined context (user&#8217;s private context)</li>
 </ul>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/apps_mydata_dataupload_result.png"><img alt="../_images/apps_mydata_dataupload_result.png" src="../_images/apps_mydata_dataupload_result.png" style="width: 1208.0px; height: 599.2px;" /></a>
+<img alt="../_images/apps_mydata_dataupload_result.png" src="../_images/apps_mydata_dataupload_result.png" />
 </div>
 </div>
 <div class="section" id="data-publication">
-<h2>Data Publication<a class="headerlink" href="#data-publication" title="Permalink to this headline">¶</a></h2>
+<span id="datapublish"></span><h2>Data Publication<a class="headerlink" href="#data-publication" title="Permalink to this headline">¶</a></h2>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/apps_mydata_datapublish.png"><img alt="../_images/apps_mydata_datapublish.png" src="../_images/apps_mydata_datapublish.png" style="width: 297.6px; height: 568.0px;" /></a>
+<img alt="../_images/apps_mydata_datapublish.png" src="../_images/apps_mydata_datapublish.png" />
 </div>
 <p>This process publish data on the catalogue. It performs a query for every opensearch reference set in input and publish it in the catalogue index specified. At the end of the process, a reference to the catalogue index for viewing the results is returned.</p>
 <ul class="simple">
 <li>Open the service <strong>Data Publication</strong> in the WPS Service tab</li>
 <li>Select the context <strong>My Repository</strong></li>
 <li>Drag and drop items from the search result tab into the field <strong>Data items</strong></li>
-<li>Set Terradue <strong>Username</strong> and Terradue <strong>Apikey</strong> using the Geobrowser clipboard button</li>
-<li>Set the <strong>Index</strong> (if not your private one)</li>
+<li>Set the <strong>Index</strong> (you can use your private index or an index shared with your community, e.g <strong>gep-community</strong>)</li>
 <li>Click on <strong>Run job</strong></li>
 <li>Click on <strong>Show results</strong>, the published items are available in the search result</li>
 </ul>
@@ -274,7 +272,7 @@
 <div class="section" id="data-contextualization">
 <h2>Data Contextualization<a class="headerlink" href="#data-contextualization" title="Permalink to this headline">¶</a></h2>
 <div class="img-border figure">
-<a class="reference internal image-reference" href="../_images/apps_mydata_datacontext.png"><img alt="../_images/apps_mydata_datacontext.png" src="../_images/apps_mydata_datacontext.png" style="width: 297.6px; height: 660.8px;" /></a>
+<img alt="../_images/apps_mydata_datacontext.png" src="../_images/apps_mydata_datacontext.png" />
 </div>
 <p>This process contextualize data. It performs a geospatial analysis of the files in a specific repository for a given directory of the Data Gateway. At the end of the process, an OWS context with all the possible offerings of the analyzed files is returned.</p>
 <ul class="simple">

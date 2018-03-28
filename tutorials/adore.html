@@ -190,14 +190,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roi_pac.html">Interferogram generation with ROI_PAC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-asar.html">G-POD PF-ASAR Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tio.html">Ground displacement timeseries analysis with TIO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
 <li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
@@ -232,6 +229,24 @@
       
   <div class="section" id="interferogram-generation-with-adore-doris">
 <h1>Interferogram generation with ADORE DORIS<a class="headerlink" href="#interferogram-generation-with-adore-doris" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/tuto_adore_icon.png" src="../_images/tuto_adore_icon.png" />
+<p><strong>ADORE DORIS interferometric processor</strong></p>
+<p>ADORE DORIS is an Interferometric Synthetic Aperture Radar (InSAR) processor developed by the University of Miami Geodesy Group, to help researchers generate interferograms with ease.
+ADORE stands for Automated DORIS Environment. DORIS is a standalone program that can perform most common steps of the interferometric radar processing in a modular set up.
+DORIS handles SLC (Single Look Complex) data to generate interferometric products, and can be used to georeference unwrapped products.
+This service supports processing of ENVISAT ASAR Image Mode Level 1 (ASA_IMS_1P) data.</p>
+<p><strong>EO sources supported</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Envisat ASAR Image Mode Level 1 (ASA_IMS_1P)</li>
+</ul>
+</div></blockquote>
+<p><strong>Output specifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>coseismic interferogram</li>
+</ul>
+</div></blockquote>
 <div class="section" id="select-the-processing">
 <h2>Select the processing<a class="headerlink" href="#select-the-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -245,6 +260,10 @@
 </div>
 <div class="section" id="fill-the-parameters">
 <h2>Fill the parameters<a class="headerlink" href="#fill-the-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">slave and master can be picked up by using the following data package (alternatively to the search steps described): <strong>ADORE_LAquila</strong></p>
+</div>
 <div class="section" id="slave-product-reference">
 <h3>Slave product reference<a class="headerlink" href="#slave-product-reference" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
