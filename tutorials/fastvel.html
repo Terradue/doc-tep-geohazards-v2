@@ -174,7 +174,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gmtsar.html">Interferogram generation with GMTSAR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS InSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
@@ -241,6 +241,7 @@
 <hr class="docutils" />
 <p>This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode)
 or a mean displacement velocity map (MTA mode) on the GEP.</p>
+<p>..NOTE:: Processing parameters example for reproducing a succesful job are described in the end of this tutorial.</p>
 <div class="section" id="processor-configuration">
 <h2>Processor configuration<a class="headerlink" href="#processor-configuration" title="Permalink to this headline">¶</a></h2>
 <p>The user shall login on the GEP to the EO services provided by TRE ALTAMIRA and in the Processing Services section, select the FASTVEL service.</p>
@@ -418,7 +419,7 @@ The SAR data set is available as a data package named FASTVEL_IFG_FOGO_T140_DSC
 <li>Goldstein phase filter exponential factor: 0.5</li>
 <li>Phase Unwrapping: false</li>
 <li>Coherence Threshold: 0.5 <em>(leave default)</em></li>
-<li>APS Correlation Distance [m]: 2000 <em>(leave default)</em></li>
+<li>APS Correlation Distance [m]: 2000</li>
 </ul>
 <p><strong>MTA mode</strong></p>
 <p>The Job to reproduce corresponds to an stack of 29 Sentinel-1 Descending Track 110 images over the area of Suria in Catalonia (Spain). The job name is FASTVEL MTA SURIA TEST DESC.
