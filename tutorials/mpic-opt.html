@@ -248,20 +248,7 @@ It comprises three components for i) the measurement of sub-pixel displacement a
 </ul>
 </div></blockquote>
 <p><strong>Output specifications</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li>Cloud masks (8-bit GeoTiffs representing the mask for each time step)</li>
-<li>Corrected displacement fields and correlation map for each time step (Floating point GeoTiffs representing the measured displacements among the two respective</li>
-</ul>
-</div></blockquote>
-<dl class="docutils">
-<dt>input images in pixels)</dt>
-<dd><ul class="first last simple">
-<li>MPIC landslide detection (A floating point GeoTiff representing the vector coherence of all time-steps accumulated</li>
-</ul>
-</dd>
-</dl>
-<p>with a value range of [0,1])</p>
+<p>See <a class="reference internal" href="#output-specifications">output specifications</a>.</p>
 <hr class="docutils" />
 <p>This service targets the detection and measurement of horizontal ground deformation (e.g. co-seismic slip, landsliding) based on sub-pixel image correlation. The service allows to jointly analyse a single pairs or time-series of Sentinel-2 images. It combines methods for sub-pixel image matching of multiple-pair combinations as presented in <a class="footnote-reference" href="#id6" id="id1">[1]</a> and the correction of systematic co-registration residuals as presented in <a class="footnote-reference" href="#id7" id="id2">[2]</a>.</p>
 <p>This tutorial will introduce you to the use of the service for the detection of landslide surface displacement for two use cases beeing the quantification of landslide surface displacement and co-seismic displacement. To this end we will process a series of Sentinel-2 images acquired over the Harmalière landslide (France 2016) in and Sentinel-2 images acquired before and after the Kaikoura earthquake (New Zealand 2016).</p>
@@ -391,7 +378,7 @@ For this tutorial we will rely on readily prepared data packages which are acces
 <div class="align-center figure">
 <a class="reference internal image-reference" href="../_images/tuto_mpicopt_12.png"><img alt="../_images/tuto_mpicopt_12.png" src="../_images/tuto_mpicopt_12.png" style="width: 750px;" /></a>
 </div>
-<p>The service output generally includes the following files:</p>
+<p id="output-specifications">The service output generally includes the following files:</p>
 <ul class="simple">
 <li><strong>Cloud masks:</strong> 8-bit GeoTiffs representing the mask for each time step. Areas with no data and covered by clouds in the two respective input images marked as 0. Valid pixels are marked with 255. The naming convention is: <em>cloud_masks_assembled_dateimage1_dateimage2.tif</em></li>
 <li><strong>Corrected displacement fields and correlation maps for each time step:</strong> Floating point GeoTiffs representing the measured displacements among the two respective input images in pixels in E-W direction (east is postive) and N-S direction (South is positive): The naming conventions are <em>Px1_dateimage1_dateimage2.tif</em> and <em>Px2_dateimage1_dateimage2.tif</em> respectively.</li>
