@@ -244,18 +244,21 @@
 <hr class="docutils" />
 <p>This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode)
 or a mean displacement velocity map (MTA mode) on the GEP.</p>
-<p>..NOTE:: Processing parameters example for reproducing a succesful job are described in the end of this tutorial.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Processing parameters example for reproducing a succesful job are described in the end of this tutorial.</p>
+</div>
 <div class="section" id="processor-configuration">
 <h2>Processor configuration<a class="headerlink" href="#processor-configuration" title="Permalink to this headline">¶</a></h2>
 <p>The user shall login on the GEP to the EO services provided by TRE ALTAMIRA and in the Processing Services section, select the FASTVEL service.</p>
 <p>First step consists in selecting the area of interest and the stack of images covering it to be processed. To do so:</p>
 <ul class="simple">
 <li>Select the data collection to be addressed in the EO Data button (InSAR Search, Sentinel-1, ERS, ENVISAT).</li>
-<li>Select the area on the map by using the polygon or square buttons. In the &#8220;Search Form&#8221; (loupe button) a temporal selection and specification about other search parameters can be done. The images must have the same &#8220;Orbit Direction&#8221; and the same track.</li>
+<li>Select the area on the map by using the polygon or square buttons. In the &#8220;Search Form&#8221; (loupe button) a temporal selection and specification about other search parameters can be done. The images must have the same &#8220;Orbit Direction&#8221; and the same track. It is important to select those images who present a significant degree of frame overlapping being sure that the AOI is fully covered by all of them.</li>
 <li>Choose the set of images to be processed on the &#8220;Current search result&#8221; section. A minimum number of 25 images are required. The selected list of images can be drop to the &#8220;Feature Basket&#8221; section and be saved as a &#8220;Data Package&#8221;. This option is recommended in order to avoid performing the same image search again.</li>
 </ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_1.png"><img alt="../_images/tuto_fastvel_1.png" src="../_images/tuto_fastvel_1.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_1.png" src="../_images/tuto_fastvel_1.png" />
 </div>
 <p>Complete the following list of processing parameters:</p>
 <p><strong>Job title</strong>: Job name as it will be labelled an it will appear in the Job list.</p>
@@ -263,12 +266,12 @@ or a mean displacement velocity map (MTA mode) on the GEP.</p>
 and drop the selected images on the search result (or in the &#8220;Feature Basket&#8221; section once the Data Package is loaded) to this field</strong>. Note that depending on: the Maximum Temporal Baseline [days], the
 Maximum Perpendicular Baseline [m], the Maximum Doppler Difference [Hz] and the Maximum Doppler Centroid [Hz], this number could be reduced
 causing the stop of the processing. To that matter it is recommended to put a larger number than 25. In the same way, at least to do initial tests, it is recommended
-to keep the images temporal sampling equal or higher to 12 days.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_2.png"><img alt="../_images/tuto_fastvel_2.png" src="../_images/tuto_fastvel_2.png" style="width: 750px;" /></a>
+to keep the images temporal sampling equal or lower to 12 days (ex: 24 days).</p>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_2.png" src="../_images/tuto_fastvel_2.png" />
 </div>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_3.png"><img alt="../_images/tuto_fastvel_3.png" src="../_images/tuto_fastvel_3.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_3.png" src="../_images/tuto_fastvel_3.png" />
 </div>
 <p><strong>Processing Mode</strong>:</p>
 <ul class="simple">
@@ -278,11 +281,10 @@ to keep the images temporal sampling equal or higher to 12 days.</p>
 <ul class="simple">
 <li><strong>MTA</strong>: generation of the displacement velocity and updated topography maps. If this mode is selected, the parameters to be considered are: Area Of Interest, Reference Point Latitude [deg], Reference Point Longitude [deg], Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz], Maximum Doppler Centroid [Hz], Coherence Threshold, APS Correlation Distance [m].</li>
 </ul>
-<p><strong>Area Of Interest</strong>: definition of the results area. The polygon on the map can be imported as: the bounding box if the Rectangle option has been used or the bbox from geometry option
-if the Polygon option has been employed.
+<p><strong>Area Of Interest</strong>: definition of the results area. The polygon on the map can be imported as AOI.
 It can be also specified by [minlon, minlat, maxlon, maxlat]. <em>Example: 1.717,41.778,1.916,41.878</em></p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_4.png"><img alt="../_images/tuto_fastvel_4.png" src="../_images/tuto_fastvel_4.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_4.png" src="../_images/tuto_fastvel_4.png" />
 </div>
 <p><strong>Reference Point Latitude [deg]</strong>: (MTA mode) Latitude of the point (zero motion) to whom reference the velocity map points values. It has to be inside the AOI. An automatic check is done. <em>Example: 41.830858</em></p>
 <p><strong>Reference Point Longitude [deg]</strong>: (MTA mode) Longitude of the point (zero motion) to whom reference the velocity map points values. It has to be inside the AOI. An automatic check is done. <em>Example: 1.753163</em></p>
@@ -302,11 +304,11 @@ maximum distance in meters allowed for connecting neighboring pixels in the proc
 <h2>Running the job<a class="headerlink" href="#running-the-job" title="Permalink to this headline">¶</a></h2>
 <p>Click on &#8220;Run Job&#8221; button from the processor configuration panel. After that the processing status of the job is displayed along with its parameters. Wait for the job to complete. The job can be
 accessed from the &#8220;Jobs&#8221; area presenting the processing percentage. When it succesfully ends it will present a green &#8220;success&#8221; status.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_5.png"><img alt="../_images/tuto_fastvel_5.png" src="../_images/tuto_fastvel_5.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_5.png" src="../_images/tuto_fastvel_5.png" />
 </div>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_6.png"><img alt="../_images/tuto_fastvel_6.png" src="../_images/tuto_fastvel_6.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_6.png" src="../_images/tuto_fastvel_6.png" />
 </div>
 </div>
 <div class="section" id="view-results-on-the-map">
@@ -322,14 +324,14 @@ accessed from the &#8220;Jobs&#8221; area presenting the processing percentage. 
 <li>The unwrapped interferometric phase (if unwrapping selected) in geotiff format RGBA format. <em>Name: FASTVEL-IFG - Interferometric Phase Unw Preview Master Date Slave Date</em></li>
 <li>A zip file for every interferogram containing all geocoded results in geotiff format. <em>Name: FASTVEL-IFG - Results Archive Master Date Slave Date.zip</em></li>
 </ul>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_7.png"><img alt="../_images/tuto_fastvel_7.png" src="../_images/tuto_fastvel_7.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_7.png" src="../_images/tuto_fastvel_7.png" />
 </div>
-<p>The product?s pixel size is approximately 40 m x 40 m.</p>
+<p>The product&#8217;s pixel size is approximately 40 m x 40 m.</p>
 <p>In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the &#8220;download&#8221; button and select &#8220;GeoTiff [image/tiff]&#8221;.
 Its corresponding png file can be downloaded selecting &#8220;Image (png) [image/png]&#8221;.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_8.png"><img alt="../_images/tuto_fastvel_8.png" src="../_images/tuto_fastvel_8.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_8.png" src="../_images/tuto_fastvel_8.png" />
 </div>
 <p>On the IFG mode, this metadata is composed of the following fields:</p>
 <blockquote>
@@ -371,15 +373,15 @@ Its corresponding png file can be downloaded selecting &#8220;Image (png) [image
 <li>Erh: Height error [meters].</li>
 </ul>
 </div></blockquote>
-<p>The product?s pixel size is approximately 40 m x 40 m.
+<p>The product&#8217;s pixel size is approximately 40 m x 40 m.
 A colorbar is displayed for the velocity (cm/y) and the corrected topography map (m) respectively. Minimum and maximum values are calculated considering the maps histograms.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_9.png"><img alt="../_images/tuto_fastvel_9.png" src="../_images/tuto_fastvel_9.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_9.png" src="../_images/tuto_fastvel_9.png" />
 </div>
 <p>In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the &#8220;download&#8221; button and select &#8220;GeoTiff [image/tiff]&#8221;.
 Its corresponding png file can be downloaded selecting &#8220;Image (png) [image/png]&#8221;.</p>
-<div class="align-center figure">
-<a class="reference internal image-reference" href="../_images/tuto_fastvel_10.png"><img alt="../_images/tuto_fastvel_10.png" src="../_images/tuto_fastvel_10.png" style="width: 750px;" /></a>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_fastvel_10.png" src="../_images/tuto_fastvel_10.png" />
 </div>
 <p>On the MTA mode, this metadata is composed of the following fields:</p>
 <ul class="simple">
@@ -422,7 +424,7 @@ The SAR data set is available as a data package named FASTVEL_IFG_FOGO_T140_DSC
 <li>Goldstein phase filter exponential factor: 0.5</li>
 <li>Phase Unwrapping: false</li>
 <li>Coherence Threshold: 0.5 <em>(leave default)</em></li>
-<li>APS Correlation Distance [m]: 2000</li>
+<li>APS Correlation Distance [m]: 2000 <em>(leave default)</em></li>
 </ul>
 <p><strong>MTA mode</strong></p>
 <p>The Job to reproduce corresponds to an stack of 29 Sentinel-1 Descending Track 110 images over the area of Suria in Catalonia (Spain). The job name is FASTVEL MTA SURIA TEST DESC.

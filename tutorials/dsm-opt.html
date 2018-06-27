@@ -247,6 +247,7 @@
 </div></blockquote>
 <hr class="docutils" />
 <p>This service is dedicated to the generation of digital surface models (DSM) from stereo- and tri-stereo satellite images acquired by the VHR Pléaides satellites. It allows to process pairs and triplets of stereo-images to generate very-high resolution digital surface models and orthoimages. This includes tie-point extraction, the refinement RPF sensor models, dense matching, and resampling for orthorectification. The processing chain is based on the MicMac open source project <a class="footnote-reference" href="#id3" id="id1">[1]</a> and specifically the bundle adjustment methods presented in <a class="footnote-reference" href="#id4" id="id2">[2]</a>.</p>
+<p>The service DSM-OPT can only be used for specific Pleiades acquisitions (stereo-, tri-stereo-) where the convergence angle between the images is below 20°. For images with a convergence angle higher than 20°, no homologous points can be detected. Ideally, the convergence angle should be in the range 5° to 15° for a soft use of the service.</p>
 <div class="section" id="select-the-processing-service">
 <h2>Select the processing service<a class="headerlink" href="#select-the-processing-service" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
