@@ -226,49 +226,20 @@
 <h1>Full Resolution Rasterization<a class="headerlink" href="#full-resolution-rasterization" title="Permalink to this headline">¶</a></h1>
 <img alt="../_images/tuto_rss_full_resolution_rasterization_icon.png" src="../_images/tuto_rss_full_resolution_rasterization_icon.png" />
 <p><strong>Full Resolution Rasterization</strong></p>
-<p>This service provides the possibility to browse the selected data at full resolution.</p>
-<p><strong>EO sources supported</strong>:</p>
-<blockquote>
-<div><ul class="simple">
-<li>Sentinel-1</li>
-<li>Sentinel-2</li>
-<li>Sentinel-3</li>
-<li>Landsat-7</li>
-<li>Landsat-8</li>
-<li>ALOS</li>
-<li>ALOS-2</li>
-<li>Cosmo-SkyMed</li>
-<li>Terrasar-L</li>
-<li>Terrasar-X</li>
-<li>Envisat ASAR</li>
-<li>ERS SAR ASTER</li>
-<li>Radarsat-1</li>
-<li>Radarsat-2</li>
-<li>JERS</li>
-<li>TanDEM-X</li>
-<li>SRTM</li>
-<li>RISAT-1</li>
-<li>KOMPSAT-5</li>
-<li>Pleiades</li>
-<li>SPOT6/7</li>
-<li>KOMPSAT-2/3</li>
-<li>KANOPUS-v, RESURS-P</li>
-<li>UK-DMC II</li>
-</ul>
-</div></blockquote>
-<p><strong>Output specifications</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li>Full resolution images</li>
-</ul>
-</div></blockquote>
-<hr class="docutils" />
-<p>The “Full Resolution Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the geobrowser.
-The processing chain of the service has been developed with the use of SNAP and GDAL.
-The output of the service is a pre-processed EO data product in GeoTIFF which is displayed in the map at full resolution  (RGB composite for Optical data and single band product Sigma0 in dB for SAR).
-From the resulting layer it is also possible to download the original product through the metadata popup window.
-Note: In case of Sentinel-1 data the resolution is 20mx20m in order to increase the number of looks and reduce image size.</p>
-<p>This tutorial is referred to the service build V1.4.0.</p>
+<p>This service provides the possibility to browse Optical or SAR EO data at full resolution. The “Full Resolution
+Rasterization” service of the Charter Processing Platform Prototype is meant to give the possibility to
+visualize satellite imagery at different succeeding map zoom levels without artifacts directly in the
+geobrowser. The processing chain of the service has been developed with the use of SNAP and GDAL.
+The service supports optical and SAR detected products from the following missions: Pleiades 1A/1B, SPOT-
+6/-7, Sentinel-2, Landsat 8, UK-DMC 2, Kompsat-2/-3, Kanopus-V, Resurs-P, Terrasar-X, Sentinel-1, ALOS,
+ALOS-2, Radarsat-2, Rapideye, Deimos-1, VRSS1, GF-2.
+The output of the service is a pre-processed EO data product in GeoTIFF format which is displayed in the
+map at full resolution (RGB composite for Optical data and single band product Sigma0 in dB for SAR). The
+output GeoTiff is displayed in geobrowser with the possibility to access product metadata and download
+original dataset to be used in further processing.</p>
+<div class="align-center width px align center figure">
+<img alt="../_images/tuto_rss_full_resolution_rasterization_output_table.png" src="../_images/tuto_rss_full_resolution_rasterization_output_table.png" />
+</div>
 <div class="section" id="select-the-processing-service">
 <h2>Select the Processing Service<a class="headerlink" href="#select-the-processing-service" title="Permalink to this headline">¶</a></h2>
 <p>Log in on the Charter Processing Platform Prototype portal and from the “Processing Services” tab, select the “Full Resolution Rasterization” service.</p>
