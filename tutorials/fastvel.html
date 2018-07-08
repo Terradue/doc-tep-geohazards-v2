@@ -235,11 +235,29 @@
 </div></blockquote>
 <p><strong>Output specifications</strong></p>
 <blockquote>
-<div><ul class="simple">
-<li>Differential interferogramas (if IFG mode selected).</li>
-<li>Ground displacement velocity map.</li>
-<li>Updated topography (reference DEM + height error).</li>
+<div><dl class="docutils">
+<dt>In IFG mode:</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>Differential interferograms</dt>
+<dd><ul class="first last">
+<li>Interferometric Amplitude (browse png/GeoTIFF, product GeoTIFF)</li>
+<li>Interferometric Coherence (browse png/GeoTIFF, product GeoTIFF)</li>
+<li>Interferometric Phase (browse png/GeoTIFF, product GeoTIFF)</li>
 </ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>In MTA mode:</dt>
+<dd><ul class="first last simple">
+<li>Ground displacement velocity map (browse png/GeoTIFF, product GeoTIFF)</li>
+<li>Updated topography [reference DEM + height error] (browse png/GeoTIFF, product GeoTIFF)</li>
+<li>CSV file with the main information of PSI products in the LOS (Line Of Sight)</li>
+</ul>
+</dd>
+</dl>
 </div></blockquote>
 <hr class="docutils" />
 <p>This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode)
@@ -328,8 +346,8 @@ accessed from the &#8220;Jobs&#8221; area presenting the processing percentage. 
 <img alt="../_images/tuto_fastvel_7.png" src="../_images/tuto_fastvel_7.png" />
 </div>
 <p>The product&#8217;s pixel size is approximately 40 m x 40 m.</p>
-<p>In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the &#8220;download&#8221; button and select &#8220;GeoTiff [image/tiff]&#8221;.
-Its corresponding png file can be downloaded selecting &#8220;Image (png) [image/png]&#8221;.</p>
+<p>In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the &#8220;download&#8221; button and select &#8220;Product GeoTiff&#8221;.
+Its corresponding png file can be downloaded selecting &#8220;Image (png)&#8221;.</p>
 <div class="align-center width px align center figure">
 <img alt="../_images/tuto_fastvel_8.png" src="../_images/tuto_fastvel_8.png" />
 </div>
@@ -351,7 +369,7 @@ Its corresponding png file can be downloaded selecting &#8220;Image (png) [image
 <li>Geometry (POLYGON)</li>
 </ul>
 </div></blockquote>
-<p>To download the corresponding text file (with the .properties extension), click on the Download button and select &#8220;File (properties [application/octet-stream])&#8221;.</p>
+<p>To download the corresponding text file (with the .properties extension), click on the Download button and select &#8220;Metadata (properties)&#8221;.</p>
 <p><strong>On MTA mode</strong>:</p>
 <ul class="simple">
 <li>Mean displacement velocity (cm/y) map in geotiff format. <em>Name: FASTVEL_MTA_&lt;S1/ERS/ENV&gt;_&lt;ASC/DSC&gt;_Vel.tif</em></li>
@@ -378,8 +396,8 @@ A colorbar is displayed for the velocity (cm/y) and the corrected topography map
 <div class="align-center width px align center figure">
 <img alt="../_images/tuto_fastvel_9.png" src="../_images/tuto_fastvel_9.png" />
 </div>
-<p>In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the &#8220;download&#8221; button and select &#8220;GeoTiff [image/tiff]&#8221;.
-Its corresponding png file can be downloaded selecting &#8220;Image (png) [image/png]&#8221;.</p>
+<p>In order to download the results, firstly select them on the Results Table and a metadata window about the file appears on the map. Click on the &#8220;download&#8221; button and select &#8220;Product GeoTiff&#8221;.
+Its corresponding png file can be downloaded selecting &#8220;Image (png)&#8221;.</p>
 <div class="align-center width px align center figure">
 <img alt="../_images/tuto_fastvel_10.png" src="../_images/tuto_fastvel_10.png" />
 </div>
@@ -395,7 +413,7 @@ Its corresponding png file can be downloaded selecting &#8220;Image (png) [image
 <li>Processing Date (date).</li>
 <li>Geometry (POLYGON).</li>
 </ul>
-<p>To download the corresponding text file (with the .properties extension), click on the &#8220;Download&#8221; button and select &#8220;File (properties [application/octet-stream])&#8221;.</p>
+<p>To download the corresponding text file (with the .properties extension), click on the &#8220;Download&#8221; button and select &#8220;Metadata (properties)&#8221;.</p>
 <p>The Job can be resubmited by clicking on the &#8220;Resubmit Job&#8221; button. After that, the FASTVEL form will appear allowing the modification of the parameters.</p>
 <p>The visibility of the Job can be changed by selecting &#8220;Share with anyone&#8221; or &#8220;Restricted sharing&#8221; to make it visible to the rest of users.</p>
 <p>An xml file including processing information is generated and can be visualized by clicking the XML Result button.</p>
@@ -409,8 +427,8 @@ Its corresponding png file can be downloaded selecting &#8220;Image (png) [image
 <h2>Processing parameters example for reproducing a succesful job<a class="headerlink" href="#processing-parameters-example-for-reproducing-a-succesful-job" title="Permalink to this headline">¶</a></h2>
 <p><strong>IFG Mode</strong></p>
 <p>The Job to reproduce corresponds to an stack of 5 Sentinel-1 Descending Track 140 images over the island of Fogo (Cape Verde). The Job name is FASTVEL IFG FOGO.
-The SAR data set is available as a data package named FASTVEL_IFG_FOGO_T140_DSC
-(<a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/data/package/FASTVEL_IFG_FOGO_T140_DSC/search?key=17a8630a-c9c3-453c-bd9f-4b914ba2a1d5">https://geohazards-tep-ref.terradue.com/t2api/data/package/FASTVEL_IFG_FOGO_T140_DSC/search?key=17a8630a-c9c3-453c-bd9f-4b914ba2a1d5</a>)</p>
+The SAR data set is available as a data package named FASTVEL_IFG_FOGO_T140_DSC (type this string in the data package filter box)
+(<a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DFASTVEL_IFG_FOGO_T140_DSC&amp;id=esaapp">https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DFASTVEL_IFG_FOGO_T140_DSC&amp;id=esaapp</a>)</p>
 <p>The values of the rest of parameters are the following:</p>
 <ul class="simple">
 <li>Processing Mode: IFG</li>
@@ -428,8 +446,8 @@ The SAR data set is available as a data package named FASTVEL_IFG_FOGO_T140_DSC
 </ul>
 <p><strong>MTA mode</strong></p>
 <p>The Job to reproduce corresponds to an stack of 29 Sentinel-1 Descending Track 110 images over the area of Suria in Catalonia (Spain). The job name is FASTVEL MTA SURIA TEST DESC.
-The SAR data set is available as a data package named S1A_DSC_110_CAT
-(<a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/data/package/S1A_DSC_110_CAT/search?key=11fad40f-2894-4c7b-b2d1-412d30acfef5">https://geohazards-tep-ref.terradue.com/t2api/data/package/S1A_DSC_110_CAT/search?key=11fad40f-2894-4c7b-b2d1-412d30acfef5</a>)</p>
+The SAR data set is available as a data package named S1A_DSC_110_CAT (type this string in the data package filter box)
+(<a class="reference external" href="https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DS1A_DSC_110_CAT&amp;id=esaapp">https://geohazards-tep-ref.terradue.com/t2api/share?url=https%3A%2F%2Fgeohazards-tep-ref.terradue.com%2Ft2api%2Fdata%2Fpackage%2Fsearch%3Fid%3DS1A_DSC_110_CAT&amp;id=esaapp</a>)</p>
 <p>The values of the rest of parameters are the following:</p>
 <ul class="simple">
 <li>Processing Mode: MTA</li>
