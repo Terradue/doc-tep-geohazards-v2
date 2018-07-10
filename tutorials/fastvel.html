@@ -221,9 +221,9 @@
   <div class="section" id="fastvel-for-displacement-velocity-map-generation">
 <h1>FASTVEL for displacement velocity map generation<a class="headerlink" href="#fastvel-for-displacement-velocity-map-generation" title="Permalink to this headline">¶</a></h1>
 <img alt="../_images/tuto_fastvel_icon.png" src="../_images/tuto_fastvel_icon.png" />
-<p><strong>FASTVEl</strong></p>
+<p><strong>FASTVEL</strong></p>
 <p>FASTVEL algorithm has been developed by TRE-Altamira for generating differential interferograms or PSI-based mean displacement velocity maps from a set of Sentinel-1 or ASAR images</p>
-<p><strong>EO sources supported</strong>:</p>
+<p><strong>EO sources supported</strong></p>
 <blockquote>
 <div><ul class="simple">
 <li>Envisat ASAR Image Mode Level 0 (RAW)</li>
@@ -260,8 +260,7 @@
 </dl>
 </div></blockquote>
 <hr class="docutils" />
-<p>This tutorial will describe the processing of a set of ASAR or Sentinel-1 IW images to generate a set of differential interferograms (IFG mode)
-or a mean displacement velocity map (MTA mode) on the GEP.</p>
+<p>This tutorial will describe the processing of a set of Sentinel-1 IW (or ASAR) images to generate a set of differential interferograms (IFG mode) or a mean displacement velocity map (MTA mode) on the GEP.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Processing parameters example for reproducing a succesful job are described in the end of this tutorial.</p>
@@ -281,10 +280,7 @@ or a mean displacement velocity map (MTA mode) on the GEP.</p>
 <p>Complete the following list of processing parameters:</p>
 <p><strong>Job title</strong>: Job name as it will be labelled an it will appear in the Job list.</p>
 <p><strong>SAR data set</strong>: set of SLC images to be processed. A minimum number of 25 images are required. <strong>Drag
-and drop the selected images on the search result (or in the &#8220;Feature Basket&#8221; section once the Data Package is loaded) to this field</strong>. Note that depending on: the Maximum Temporal Baseline [days], the
-Maximum Perpendicular Baseline [m], the Maximum Doppler Difference [Hz] and the Maximum Doppler Centroid [Hz], this number could be reduced
-causing the stop of the processing. To that matter it is recommended to put a larger number than 25. In the same way, at least to do initial tests, it is recommended
-to keep the images temporal sampling equal or lower to 12 days (ex: 24 days).</p>
+and drop the selected images on the search result (or in the &#8220;Feature Basket&#8221; section once the Data Package is loaded) to this field</strong>. Note that depending on: the Maximum Temporal Baseline [days], the Maximum Perpendicular Baseline [m], the Maximum Doppler Difference [Hz] and the Maximum Doppler Centroid [Hz], this number could be reduced by the service causing the stop of the processing. To that matter it is recommended to put a number of images larger than 25. In the same way, at least to do initial tests, it is recommended to keep the images temporal sampling equal or grater than 12 days (ex: 24 days).</p>
 <div class="align-center width px align center figure">
 <img alt="../_images/tuto_fastvel_2.png" src="../_images/tuto_fastvel_2.png" />
 </div>
@@ -293,10 +289,7 @@ to keep the images temporal sampling equal or lower to 12 days (ex: 24 days).</p
 </div>
 <p><strong>Processing Mode</strong>:</p>
 <ul class="simple">
-<li><strong>IFG</strong>: generation of a set of differential interferograms. If this mode is selected, the parameters to be considered are: Area Of Interest, Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz],</li>
-</ul>
-<p>Maximum Doppler Centroid [Hz], Goldstein phase filter exponential factor, Phase Unwrapping.</p>
-<ul class="simple">
+<li><strong>IFG</strong>: generation of a set of differential interferograms. If this mode is selected, the parameters to be considered are: Area Of Interest, Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz], Maximum Doppler Centroid [Hz], Goldstein phase filter exponential factor, Phase Unwrapping.</li>
 <li><strong>MTA</strong>: generation of the displacement velocity and updated topography maps. If this mode is selected, the parameters to be considered are: Area Of Interest, Reference Point Latitude [deg], Reference Point Longitude [deg], Maximum Temporal Baseline [days], Maximum Perpendicular Baseline [m], Maximum Doppler Difference [Hz], Maximum Doppler Centroid [Hz], Coherence Threshold, APS Correlation Distance [m].</li>
 </ul>
 <p><strong>Area Of Interest</strong>: definition of the results area. The polygon on the map can be imported as AOI.
@@ -332,7 +325,7 @@ accessed from the &#8220;Jobs&#8221; area presenting the processing percentage. 
 <div class="section" id="view-results-on-the-map">
 <h2>View results on the map<a class="headerlink" href="#view-results-on-the-map" title="Permalink to this headline">¶</a></h2>
 <p>Once the job is completed, access to it from the &#8220;Jobs&#8221; area and click on the &#8220;Show results&#8221; button. The following elements will appear on the <em>Results Table</em>:</p>
-<p><strong>On IFG mode</strong>:</p>
+<p><strong>In IFG mode</strong>:</p>
 <ul class="simple">
 <li>The interferometric amplitude in geotiff format. This is the modulus of the complex product of the master SLC image and the coregistered slave SLC image. <em>Name: FASTVEL-IFG - Interferometric Amplitude Master Date Slave Date</em></li>
 <li>The interferometric coherence in geotiff format. This is a floating point geotiff image with values within [0.0 255.0]. Pixel values of 255.0 are equivalent to a coherence value of 1. <em>Name: FASTVEL-IFG - Interferometric Coherence Master Date Slave Date</em></li>
@@ -370,7 +363,7 @@ Its corresponding png file can be downloaded selecting &#8220;Image (png)&#8221;
 </ul>
 </div></blockquote>
 <p>To download the corresponding text file (with the .properties extension), click on the Download button and select &#8220;Metadata (properties)&#8221;.</p>
-<p><strong>On MTA mode</strong>:</p>
+<p><strong>In MTA mode</strong>:</p>
 <ul class="simple">
 <li>Mean displacement velocity (cm/y) map in geotiff format. <em>Name: FASTVEL_MTA_&lt;S1/ERS/ENV&gt;_&lt;ASC/DSC&gt;_Vel.tif</em></li>
 <li>RGB Mean displacement velocity map. <em>Name: FASTVEL_MTA_&lt;S1/ERS/ENV&gt;_&lt;ASC/DSC&gt;_Vel.rgb.tif</em></li>
