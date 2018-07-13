@@ -33,8 +33,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MPIC-OPT: Multiple pairwise optical image correlation" href="mpic-opt.html" />
-    <link rel="prev" title="PSI Post Processing Service" href="psi_post_proc.html" />
+    <link rel="next" title="GMT5SAR for ERS and ENVISAT" href="gmtsar.html" />
+    <link rel="prev" title="DSM-OPT: Digital surface models from optical stereo satellite images" href="dsm-opt.html" />
     <link rel="stylesheet" href="../_static/terradue.css" type="text/css" />
     <script src="../_static/affixTrick.js"></script>
   
@@ -127,11 +127,11 @@
               
                 
   <li>
-    <a href="psi_post_proc.html" title="Previous Chapter: PSI Post Processing Service"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; PSI Post Proc...</span>
+    <a href="dsm-opt.html" title="Previous Chapter: DSM-OPT: Digital surface models from optical stereo satellite images"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; DSM-OPT: Digi...</span>
     </a>
   </li>
   <li>
-    <a href="mpic-opt.html" title="Next Chapter: MPIC-OPT: Multiple pairwise optical image correlation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">MPIC-OPT: Mul... &raquo;</span>
+    <a href="gmtsar.html" title="Next Chapter: GMT5SAR for ERS and ENVISAT"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">GMT5SAR for E... &raquo;</span>
     </a>
   </li>
               
@@ -170,23 +170,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../cloud-administrator/index.html">Cloud Operations Administrator Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Thematic Applications</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Processing tutorials</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="adore.html">Interferogram generation with ADORE DORIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR for ERS and ENVISAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="srtm.html">Digital Elevation Model generation with SRTM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">Stripmap Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">Sentinel-1 Interferogram generation with DIAPASON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adore.html">ADORE DORIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_coin.html">COIN – Coherence and Intensity change for Sentinel-1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">Band Combination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stemp.html">Surface Temperature Map (STEMP)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_combi.html">COMBI - Band Combination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-sm.html">DIAPASON InSAR - StripMap(SM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diapason-iw.html">DIAPASON InSAR Sentinel-1 TOPSAR(IW,EW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">FASTVEL for displacement velocity map generation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#processor-configuration">Processor configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#running-the-job">Running the job</a></li>
@@ -194,12 +183,24 @@
 <li class="toctree-l3"><a class="reference internal" href="#processing-parameters-example-for-reproducing-a-succesful-job">Processing parameters example for reproducing a succesful job</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar.html">GMT5SAR for ERS and ENVISAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gmtsar_s1.html">GMT5SAR for Sentinel-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-dinsar.html">G-POD GAMMA DInSAR Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-gamma-l0.html">G-POD GAMMA-L0 Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-pf-ers.html">G-POD PF-ERS Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpod-sbas-insar.html">G-POD SBAS Stripmap Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mpic-opt.html">MPIC-OPT: Multiple pairwise optical image correlation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dsm-opt.html">DSM-OPT: Digital surface models from optical stereo satellite images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">CNR-IREA P-SBAS Sentinel-1 processing on-demand</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">Full Resolution Rasterization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optical-flood-tool.html">Optical Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gep-sbas-s1.html">P-SBAS Sentinel-1 processing on-demand by CNR-IREA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="psi_post_proc.html">PSI Post-Processing Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_full_resolution_rasterization.html">RASTER - Full Resolution Rasterization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sar-flood-tool.html">SAR Flood Tool Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_snac.html">SNAC - SNAP S-1 GRD Amplitude Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rss_snap_s1_insar.html">SNAP-InSAR – SNAP Sentinel-1 IW SLC Interferogram and Displacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srtm.html">SRTM Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stamps-ps.html">StaMPS Permanent Scatterer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemp.html">STEMP - Surface Temperature Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tio.html">TIO - Optical time serie analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -272,7 +273,7 @@
 <ul class="simple">
 <li>Select the data collection to be addressed in the EO Data button (InSAR Search, Sentinel-1, ERS, ENVISAT).</li>
 <li>Select the area on the map by using the polygon or square buttons. In the &#8220;Search Form&#8221; (loupe button) a temporal selection and specification about other search parameters can be done. The images must have the same &#8220;Orbit Direction&#8221; and the same track. It is important to select those images who present a significant degree of frame overlapping being sure that the AOI is fully covered by all of them.</li>
-<li>Choose the set of images to be processed on the &#8220;Current search result&#8221; section. A minimum number of 25 images are required. The selected list of images can be drop to the &#8220;Feature Basket&#8221; section and be saved as a &#8220;Data Package&#8221;. This option is recommended in order to avoid performing the same image search again.</li>
+<li>Choose the set of images to be processed on the &#8220;Current search result&#8221; section. <strong>A minimum number of 25 images are required in MTA mode</strong>. The selected list of images can be drop to the &#8220;Feature Basket&#8221; section and be saved as a &#8220;Data Package&#8221;. This option is recommended in order to avoid performing the same image search again.</li>
 </ul>
 <div class="align-center width px align center figure">
 <img alt="../_images/tuto_fastvel_1.png" src="../_images/tuto_fastvel_1.png" />
